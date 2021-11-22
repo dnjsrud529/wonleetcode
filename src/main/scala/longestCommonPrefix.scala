@@ -5,6 +5,7 @@ object longestCommonPrefix {
     var count = 0
     var temp = ""
     var chk = true
+    //문자열 배열을 한 문자열로 변환
     strs.foreach(s => {
       if(count == 0)
         strsSum = s
@@ -14,7 +15,7 @@ object longestCommonPrefix {
       count = count+1
     })
 
-
+    //첫번째 문자를 보면서 전체 문자열의 해당 문자가 몇번 들어가는지 확인
     strs(0).foreach(c =>{
       if(chk){
         temp = temp+c

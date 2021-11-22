@@ -5,7 +5,7 @@ object romanToInteger {
     val charArray = s.toArray
     var intArray = new Array[Int](s.length+1)
 
-
+    //받은 문자열을 각각 매핑된 정수 배열로 변환
     charArray.zipWithIndex.foreach{
       case(char,i) => {
         intArray(i) = roman(char)
@@ -16,6 +16,7 @@ object romanToInteger {
     var temp = 0
     var bef = 0
 
+    //숫자를 하나씩 읽으며 다음 숫자와 이전 숫자를 비교하여 값을 구한 후 결과에 추가
     intArray.foreach(num =>{
 
       if(temp == 0){
