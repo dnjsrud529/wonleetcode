@@ -21,7 +21,7 @@ object twoSum {
 
   }
 
-  def main(args: Array[String]): Unit = {
-    println(twoSum(Array(2,7,11,15),9))
-  }
+//  def main(args: Array[String]): Unit = {
+//    println(twoSum(Array(2,7,11,15),9))
+//  }
 }
