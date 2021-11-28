@@ -47,7 +47,7 @@ object validParentheses {
   }
 
 
-  def main(args: Array[String]): Unit = {
-    println(isValid3("{[]}"))
-  }
+//  def main(args: Array[String]): Unit = {
+//    println(isValid3("{[]}"))
+//  }
 }
