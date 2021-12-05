@@ -1,3 +1,4 @@
+//9
 object palindromeNumber {
   //입력된 숫자의 자릿수를 리턴
   def getLength(num: Int, compare: Int, size: Int): Int = {

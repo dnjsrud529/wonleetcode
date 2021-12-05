@@ -1,3 +1,4 @@
+//28
 object implementStrStr {
   def strStr(haystack: String, needle: String): Int = {
     var ret = -1

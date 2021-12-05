@@ -1,3 +1,4 @@
+//14
 object longestCommonPrefix {
   def longestCommonPrefix(strs: Array[String]): String = {
     var ret = ""

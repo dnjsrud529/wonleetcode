@@ -1,3 +1,4 @@
+//58
 object lengthOfLstWord {
   def lengthOfLastWord(s: String): Int = {
     if(s.length == 0 || s == null)

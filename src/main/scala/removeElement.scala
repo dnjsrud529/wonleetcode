@@ -1,3 +1,4 @@
+//27
 object removeElement {
   def removeElement(nums: Array[Int], `val`: Int): Int = {
     var dist = nums.filter(x => x != `val`)

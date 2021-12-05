@@ -1,3 +1,4 @@
+//67
 object addBinary {
   def addBinary(a: String, b: String): String = {
     if(a.length == 0)

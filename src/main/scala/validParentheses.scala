@@ -1,5 +1,5 @@
 import scala.collection.mutable
-
+//20
 object validParentheses {
   def isValid(s: String): Boolean = {
     var ret = true

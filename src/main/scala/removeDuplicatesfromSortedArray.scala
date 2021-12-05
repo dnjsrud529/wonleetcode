@@ -1,3 +1,4 @@
+//26
 object removeDuplicatesfromSortedArray {
 
   def removeDuplicates(nums: Array[Int]): Int = {
