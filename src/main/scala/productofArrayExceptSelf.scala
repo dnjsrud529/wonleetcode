@@ -1,6 +1,41 @@
 object productofArrayExceptSelf {
   //238
+  //hey problems said don't use divide operation... Are you idiot?
+
   def productExceptSelf(nums: Array[Int]): Array[Int] = {
+    var left = new Array[Int](nums.length)
+    var right = new Array[Int](nums.length)
+    var ret = new Array[Int](nums.length)
+    var temp = 1
+    for(i <- 0 to nums.length-2){
+      temp *= nums(i)
+      left(i+1) = temp
+    }
+    left(0) = 1
+    temp = 1
+    for(i <- nums.length -1 to 1 by -1){
+      temp *= nums(i)
+      right(i-1) = temp
+    }
+    right(nums.length-1) = 1
+
+    for(i <- 0 to nums.length -1){
+        ret(i) = left(i) * right(i)
+    }
+
+    ret
+  }
+
+  def productExceptSelf3(nums: Array[Int]): Array[Int] = {
+    var ret = new Array[Int](nums.length)
+    nums.zipWithIndex.foreach{case (num,i) => {
+      ret(i) = nums.zipWithIndex.filter(_._2 != i).unzip._1.product
+    }}
+
+    ret
+  }
+
+  def productExceptSelf2(nums: Array[Int]): Array[Int] = {
     var all = 1
     var withoutZero = 1
     var ret = new Array[Int](nums.length)
@@ -55,7 +90,7 @@ object productofArrayExceptSelf {
   }
 
   def main(args: Array[String]): Unit = {
-    var tt = Array[Int](-1,1,0,-3,3,0)
+    var tt = Array[Int](1,2,3,4)
     println(productExceptSelf(tt))
   }
 
