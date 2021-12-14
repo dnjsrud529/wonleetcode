@@ -12,7 +12,7 @@ object findMinimuminRotatedSortedArray {
 
   def findMax(subarray: Array[Int],start: Int,end: Int,chkVal: Int): Int = {
     if(start == end || start > end)
-      return subarray.length
+      return 0
     if(subarray(start) < chkVal && subarray(start) < subarray(start-1))
       start
     else if(subarray(start) < chkVal)
@@ -20,7 +20,7 @@ object findMinimuminRotatedSortedArray {
     else if(subarray(start) > chkVal)
       findMax(subarray,(start+end)/2,end,chkVal)
     else
-      subarray.length
+      0
   }
 
   def main(args: Array[String]): Unit = {
