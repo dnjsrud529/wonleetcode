@@ -1,6 +1,24 @@
 object containerWithMostWater {
   //11
   def maxArea(height: Array[Int]): Int = {
+    var end = height.length-1
+    var start = 0
+    var ret = 0
+
+    while(start < end){
+      if(height(start) > height(end)){
+        ret = Math.max(ret,height(end)*(end-start))
+        end -= 1
+      }else{
+        ret = Math.max(ret,height(start)*(end-start))
+        start += 1
+      }
+    }
+
+    ret
+  }
+
+  def maxAreaBad(height: Array[Int]): Int = {
     var weight = height.length-1
     var minSide = Math.min(height(0),height(height.length-1))
     var ret = minSide * weight
@@ -23,7 +41,7 @@ object containerWithMostWater {
   }
 
   def main(args: Array[String]): Unit = {
-    var tt = Array[Int](2,3,4,5,18,17,6)
+    var tt = Array[Int](1,8,6,2,5,4,8,3,7)
     println(maxArea(tt))
   }
 }
